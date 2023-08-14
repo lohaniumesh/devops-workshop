@@ -3,7 +3,7 @@
   become: true
   tasks:
   - name: add Jenkins key
-    apt-key:
+    apt_key:
       url: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
       state: present
 
