@@ -11,7 +11,7 @@ resource "aws_instance" "demo-server" {
     subnet_id = aws_subnet.dpp-public-subnet-01.id
     for_each = toset(["Jenkins-master", "build-slave", "ansible"])
     tags = {
-      name = "$(each.key)"
+      Name = "$(each.key)"
     }
 }
 
